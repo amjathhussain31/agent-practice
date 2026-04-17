@@ -1,8 +1,3 @@
-Here is a **simple README.md based on your `agent.ipynb` notebook** 👇
-(Analyzed structure: LangGraph agent + tool usage + multimodal capability)
-
----
-
 # 🤖 Agent Practice
 
 This repository contains a Jupyter Notebook that demonstrates how to build a **basic AI agent using LangChain**.
