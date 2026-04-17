@@ -1,17 +1,38 @@
+Here is a **simple README.md based on your `agent.ipynb` notebook** 👇
+(Analyzed structure: LangGraph agent + tool usage + multimodal capability)
+
+---
+
 # 🤖 Agent Practice
 
-This repository is used to practice and build **AI agents** using different tools and frameworks.
+This repository contains a Jupyter Notebook that demonstrates how to build a **basic AI agent using LangChain**.
 
 ---
 
 ## 📌 About
 
-The goal of this project is to learn how AI agents work, including:
+This project focuses on creating an **intelligent agent** that can:
 
-* Understanding user input
-* Generating responses using LLMs
-* Performing tasks using tools and APIs
-* Managing memory and workflows
+* Understand user input
+* Use tools (like image processing)
+* Reason step-by-step
+* Generate final responses
+
+The agent follows the **ReAct architecture**:
+
+* **Reason** → Think about the problem
+* **Act** → Use tools (functions/APIs)
+* **Observe** → Use results to continue reasoning ([Hugging Face][1])
+
+---
+
+## 🧠 Features
+
+* Simple agent built using **LangGraph**
+* Uses **LLM (GPT-4o / similar)** for reasoning
+* Tool integration (example: extracting text from images)
+* Multimodal capability (text + image input)
+* Step-by-step agent workflow
 
 ---
 
@@ -27,31 +48,50 @@ cd agent-practice
 2. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -U langchain_openai langchain_core langgraph
 ```
 
-3. Run the project:
+3. Add your API key:
 
-```bash
-python main.py
+```python
+import os
+os.environ["OPENAI_API_KEY"] = "your_api_key"
 ```
 
 ---
 
-## 🚀 Features
+## 📓 Notebook Content
 
-* Basic AI agents
-* Tool integration
-* Simple workflows
-* Experimentation with LLMs
+The notebook includes:
+
+* Setting up LangChain and LangGraph
+* Initializing LLM (ChatOpenAI)
+* Creating a custom tool (image → text extraction)
+* Building an agent workflow
+* Running the agent step-by-step
+
+---
+
+## ▶️ Usage
+
+Open the notebook:
+
+```bash
+jupyter notebook
+```
+
+Run each cell to see:
+
+* How the agent processes input
+* How it calls tools
+* How it generates final output
 
 ---
 
 ## 🛠️ Tech Used
 
 * Python
-* LangChain / LangGraph
-* LLM APIs (OpenAI, Groq, Gemini)
+* LangChain
+* OpenAI / LLM APIs
 
 ---
-
